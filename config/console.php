@@ -22,6 +22,7 @@ $config = [
         ],
         'db' => $db,
     ],
+    'language' => 'es_ES',
     'params' => $params,
     /*
     'controllerMap' => [

@@ -47,6 +47,7 @@ $config = [
         ],
         */
     ],
+    'defaultRoute' => 'prueba',
     'language' => 'es_ES',
     'params' => $params,
 ];
