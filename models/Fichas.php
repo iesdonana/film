@@ -11,6 +11,8 @@ use Yii;
  * @property string $titulo
  * @property string $duracion
  * @property string $anyo
+ *
+ * @property Comentarios[] $comentarios
  */
 class Fichas extends \yii\db\ActiveRecord
 {
@@ -45,5 +47,14 @@ class Fichas extends \yii\db\ActiveRecord
             'duracion' => 'Duracion',
             'anyo' => 'Anyo',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getComentarios()
+    {
+        return $this->hasMany(Comentarios::className(), ['id_ficha' => 'id'])
+                ->inverseOf('ficha');
     }
 }
